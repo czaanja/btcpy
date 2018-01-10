@@ -48,13 +48,19 @@ class Base58Codec(Codec):
     raw_prefixes = {('mainnet', 'p2pkh'): bytearray(b'\x00'),
                     ('testnet', 'p2pkh'): bytearray(b'\x6f'),
                     ('mainnet', 'p2sh'): bytearray(b'\x05'),
-                    ('testnet', 'p2sh'): bytearray(b'\xc4')}
+                    ('testnet', 'p2sh'): bytearray(b'\xc4'),
+                    ('ltcmain', 'p2pkh'): bytearray(b'\x30'),
+                    ('ltcmain', 'p2sh'): bytearray(b'\x05'), # TODO: findout
+                    }
 
     prefixes = {'1': ('p2pkh', 'mainnet'),
                 'm': ('p2pkh', 'testnet'),
                 'n': ('p2pkh', 'testnet'),
                 '3': ('p2sh', 'mainnet'),
-                '2': ('p2sh', 'testnet')}
+                '2': ('p2sh', 'testnet'),
+                'L': ('p2pkh', 'ltcmain'),
+                'M': ('p2sh', 'ltcmain'), # TODO: findout
+                }
 
     hash_len = 20
 

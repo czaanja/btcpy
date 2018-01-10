@@ -9,7 +9,7 @@
 # propagated, or distributed except according to the terms contained in the
 # LICENSE.md file.
 
-networks = {'mainnet', 'testnet', 'regtest'}
+networks = {'mainnet', 'testnet', 'regtest', 'ltcmain',}
 
 MAINNET = None
 NETNAME = None
