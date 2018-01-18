@@ -93,9 +93,11 @@ class Base58Codec(Codec):
 class Bech32Codec(Codec):
 
     net_to_hrp = {'mainnet': 'bc',
+                  'ltcmain': 'ltc',
                   'testnet': 'tb'}
 
     hrp_to_net = {'bc': 'mainnet',
+                  'ltc': 'ltcmain',
                   'tb': 'testnet'}
 
     lengths = {42: 'p2wpkh',
